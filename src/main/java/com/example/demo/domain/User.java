@@ -1,12 +1,13 @@
 package com.example.demo.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "USER")
 public class User {
+
+    @Id
+    private int id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -33,4 +34,11 @@ public class User {
         this.lastName = lastName;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
